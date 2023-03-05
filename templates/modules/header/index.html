@@ -1,0 +1,17 @@
+<script>
+  const menuItemLinks = jQuery('#sotatek_header_menu >.menu-item-has-children a');
+  const body = jQuery('body');
+  const toggle = jQuery('.sotatek-header .toggle');
+
+  menuItemLinks.click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    jQuery(this).siblings('.sub-menu').toggleClass('expand');
+  });
+
+  toggle.click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    body.toggleClass('header-active');
+  });
+</script>

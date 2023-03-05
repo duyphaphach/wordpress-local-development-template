@@ -1,0 +1,30 @@
+{
+  "name": "sotatek-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:duyphaphach/sotatek-main.git",
+  "author": "duyphaphach <duyphamle97@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node ./browser-sync.js",
+    "develop": "npx webpack --watch"
+  },
+  "devDependencies": {
+    "app-root-dir": "1.0.2",
+    "autoprefixer": "10.4.2",
+    "browser-sync": "2.27.7",
+    "browser-sync-webpack-plugin": "2.3.0",
+    "bs-html-injector": "3.0.3",
+    "css-loader": "6.7.1",
+    "dotenv": "16.0.0",
+    "less": "4.1.2",
+    "less-loader": "10.2.0",
+    "mini-css-extract-plugin": "2.6.0",
+    "optimize-css-assets-webpack-plugin": "6.0.1",
+    "style-loader": "3.3.1",
+    "webpack-cli": "4.9.2"
+  },
+  "dependencies": {
+    "webpack": "5.70.0"
+  }
+}
