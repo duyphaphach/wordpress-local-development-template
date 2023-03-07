@@ -1,0 +1,36 @@
+.t-btn {
+  .text-semi;
+  .text-lg;
+  .font-poppins;
+
+  display: inline-grid;
+  grid-auto-columns: minmax(0, max-content);
+  grid-auto-flow: column;
+  justify-content: center;
+  place-items: center;
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  border-radius: @border-radius-2;
+  user-select: none;
+  transition: all 0.2s;
+  min-height: 48px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    color: @color-primary-3;
+    background-color: @color-primary-1;
+  }
+
+  &.primary-two {
+    color: @color-primary-3;
+    background-color: @color-primary-2;
+  }
+
+  &.rounded {
+    border-radius: @border-radius-8;
+  }
+}
