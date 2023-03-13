@@ -1,20 +1,21 @@
 .t-btn {
-  .text-semi;
+  .text-medium;
   .text-lg;
   .font-poppins;
 
   display: inline-grid;
   grid-auto-columns: minmax(0, max-content);
+  grid-gap: 8px;
   grid-auto-flow: column;
   justify-content: center;
   place-items: center;
-  padding: 4px 8px;
+  padding: 4px 24px;
   border: none;
   outline: none;
   border-radius: @border-radius-2;
   user-select: none;
   transition: all 0.2s;
-  min-height: 48px;
+  min-height: 52px;
 
   &:focus {
     outline: none;
@@ -23,14 +24,89 @@
   &.primary {
     color: @color-primary-3;
     background-color: @color-primary-1;
+
+    > img {
+      filter: @filter-primary-3;
+    }
   }
 
   &.primary-two {
     color: @color-primary-3;
     background-color: @color-primary-2;
+
+    > img {
+      filter: @filter-primary-3;
+    }
+  }
+
+  &.primary-three {
+    color: @color-primary-1;
+    background-color: @color-primary-3;
+
+    > img {
+      filter: @filter-primary-1;
+    }
+  }
+
+  &.primary-four {
+    color: @color-gray-800;
+    background-color: @color-primary-4;
+
+    > img {
+      filter: @filter-gray-800;
+    }
+
+    &.glow {
+      box-shadow: 0 4px 20px 0 rgb(190 173 142 / 40%);
+    }
+  }
+
+  &.text {
+    padding: 0;
+    color: @color-primary-1;
+    background-color: transparent;
+
+    > img {
+      filter: @filter-primary-1;
+    }
+  }
+
+  &.text-two {
+    padding: 0;
+    background-color: transparent;
+    color: @color-primary-2;
+
+    > img {
+      filter: @filter-primary-2;
+    }
+  }
+
+  &.text-three {
+    padding: 0;
+    background-color: transparent;
+    color: @color-primary-3;
+
+    > img {
+      filter: @filter-primary-3;
+    }
+  }
+
+  &.text-four {
+    padding: 0;
+    background-color: transparent;
+    color: @color-primary-4;
+
+    > img {
+      filter: @filter-primary-4;
+    }
   }
 
   &.rounded {
     border-radius: @border-radius-8;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid inherit;
   }
 }

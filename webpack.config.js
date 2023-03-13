@@ -55,6 +55,7 @@ module.exports = {
         'build/main.css',
         'build/main.js'
       ],
+      reloadDebounce: 300,
       injectChanges: false,
       rewriteRules: [
         {

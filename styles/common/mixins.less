@@ -55,3 +55,22 @@
     }
   }
 }
+
+.absolute-fill (@zIndex: 0) {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: @zIndex;
+}
+
+.max-lines(@lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: @lines;
+  line-clamp: @lines;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}

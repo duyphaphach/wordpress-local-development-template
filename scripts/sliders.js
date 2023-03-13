@@ -1,6 +1,12 @@
 jQuery(window).load(function () {
-  new Swiper('.swiper', {
+  new Swiper('.hero-swiper', {
     loop: true,
+    loopAdditionalSlides: 5,
+    centeredSlides: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

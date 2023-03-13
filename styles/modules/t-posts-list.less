@@ -1,0 +1,68 @@
+.t-posts-list {
+  .posts {
+    > .item {
+      background-color: @color-primary-3;
+      padding: 220px 16px 16px;
+      box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 8%);
+      border-radius: @border-radius-3;
+      height: auto;
+      overflow: hidden;
+
+      > .thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 220px;
+        margin-bottom: 0;
+        background-color: transparent;
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      > .meta {
+        .display-grid(space-between, center, 8px);
+
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+
+        > .category {
+          > .link {
+            .text-sm;
+            .text-medium;
+
+            color: @color-primary-2;
+            text-transform: uppercase;
+          }
+        }
+
+        > .date {
+          .text-sm;
+          .text-medium;
+
+          color: @color-gray-400;
+        }
+      }
+
+      > .title {
+        .max-lines(2);
+        .text-lg;
+        .text-semi;
+
+        color: @color-gray-800;
+      }
+    }
+  }
+
+  &.posts-swiper {
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+}

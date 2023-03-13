@@ -1,3 +1,7 @@
+:root {
+  --animate-duration: 0.4s;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +13,14 @@ html, body {
   font-size: 10px;
   padding: 0;
   margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  .make-scrollbar(10px);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -20,6 +32,18 @@ p + p {
   margin-top: 0.8em;
 }
 
+img, .image {
+  user-select: none;
+}
+
+a {
+  color: @color-primary-1;
+
+  &:hover {
+    color: @color-primary-1-600;
+  }
+}
+
 a, button {
   text-decoration: none;
   user-select: none;
@@ -29,6 +53,31 @@ a, button {
   &:hover {
     text-decoration: none;
     opacity: 0.85;
+  }
+}
+
+.container {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1240px;
   }
 }
 
