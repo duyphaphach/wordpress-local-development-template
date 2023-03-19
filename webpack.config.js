@@ -49,7 +49,7 @@ module.exports = {
     }),
     new OptimizeCssAssetsPlugin(),
     new BrowserSyncPlugin({
-      proxy: "http://tasecomedia.local",
+      proxy: "http://157.245.151.61:8080",
       port: 3400,
       files: [
         'build/main.css',

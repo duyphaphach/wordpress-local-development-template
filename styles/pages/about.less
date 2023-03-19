@@ -1,0 +1,129 @@
+#page_about {
+  #section_hero_banner {
+    position: relative;
+    z-index: 0;
+
+    &__main_image {
+      filter: brightness(0.7);
+    }
+
+    &__sketch {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .texts {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      transform: translate(-50%, -50%);
+
+      h1 {
+        .header-md;
+        .text-medium;
+
+        color: @color-primary-3;
+      }
+    }
+  }
+
+  #section_message_from_ceo {
+    position: relative;
+    padding: 90px 0;
+    z-index: 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-gap: 48px;
+      align-items: center;
+
+      .texts {
+        .subtitle {
+          .text-lg;
+          .text-semi;
+          .font-fair;
+
+          margin-bottom: 0.5em;
+          color: @color-primary-4;
+        }
+
+        .title {
+          .header-sm;
+          .text-semi;
+
+          margin-bottom: 4rem;
+          color: @color-gray-800;
+        }
+
+        .description {
+          .text-md;
+
+          margin-bottom: 4rem;
+          color: @color-primary-3;
+        }
+
+        .meta.author {
+          .value {
+            .text-md;
+            .text-semi;
+
+            margin-bottom: 0.5rem;
+            color: @color-primary-2;
+          }
+
+          .label {
+            .text-sm;
+            .text-light;
+
+            padding: 0;
+            color: @color-gray-800;
+          }
+        }
+      }
+
+      .images {
+        position: relative;
+        z-index: 0;
+        overflow-y: hidden;
+        display: grid;
+        align-items: end;
+        justify-items: center;
+        min-height: 580px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 40px;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+          z-index: 1;
+        }
+
+        .background {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          opacity: 0.3;
+          z-index: -1;
+        }
+
+        .main {
+          width: 60%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
