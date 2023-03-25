@@ -74,3 +74,26 @@
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
+
+.make-underline(@color: @color-primary-1, @position: 'left') {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    width: 6rem;
+    height: 0.2rem;
+    background-color: @color;
+
+    & when (@position = 'left') {
+      left: 0;
+    }
+
+    & when (@position = 'center') {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+

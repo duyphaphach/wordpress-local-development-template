@@ -1,0 +1,340 @@
+#page_blog,
+#page_search {
+  background: #0090ca08 !important;
+
+  &__title {
+    .make-underline(@color-primary-2);
+    .header-md;
+    .text-medium;
+
+    margin-bottom: 3.6rem;
+    color: @color-gray-800;
+  }
+
+  .t-card {
+    &.post {
+      .blog-grid {
+        min-height: 380px;
+
+        > a {
+          display: inline-block;
+          width: 100%;
+          height: 220px;
+
+          .ff-post-featured-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: @border-radius-2;
+            box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+
+      .blog-grid-supplemental {
+        padding: 0;
+      }
+
+      .blog-grid-supplemental-title {
+        .display-inline-grid(start, center, 0.8rem);
+        .font-poppins;
+
+        padding: 0;
+        margin: 1.2rem 0;
+
+        .ff-meta-separator {
+          .text-sm;
+          .text-medium;
+
+          color: @color-gray-400;
+        }
+
+        .category {
+          a {
+            .font-poppins;
+            .text-sm;
+            .text-medium;
+
+            color: @color-primary-2;
+            text-transform: uppercase;
+          }
+        }
+
+        .date {
+          .font-poppins;
+          .text-sm;
+          .text-medium;
+
+          font-style: initial !important;
+          color: @color-gray-400;
+        }
+      }
+
+      .blog-grid-content {
+        .font-poppins;
+
+        padding: 0;
+
+        h2 {
+          margin: 0 0 1.2rem;
+
+          a {
+            .max-lines(2);
+            .text-lg;
+            .text-semi;
+
+            color: @color-gray-800;
+          }
+        }
+      }
+
+      .blog-grid-post-content {
+        .max-lines(2);
+        .text-sm;
+
+        color: @color-gray-800;
+      }
+    }
+  }
+
+  .ff-pagination {
+    ul {
+      li {
+        a {
+          .text-md;
+          .text-medium;
+
+          display: inline-grid;
+          padding: 0;
+          place-items: center;
+          width: 42px;
+          height: 42px;
+          color: @color-primary-1;
+          background-color: transparent;
+          border-radius: @border-radius-12;
+        }
+
+        &.active {
+          a {
+            color: @color-primary-3;
+            background-color: @color-primary-1;
+          }
+        }
+      }
+    }
+  }
+
+  .ark-sidebar {
+    padding-left: 2.4rem;
+  }
+
+  .widget {
+    margin-bottom: 5.6rem;
+
+    .widget-body {
+      h2,
+      .wp-block-search__label {
+        .make-underline(@color-primary-2);
+        .header-xs;
+        .text-medium;
+
+        margin-bottom: 2.4rem;
+        color: @color-gray-800;
+      }
+
+      input[type="search"] {
+        .text-sm;
+
+        display: grid;
+        width: 100%;
+        align-items: center;
+        padding: 0.5em 1.5em;
+        height: 4em;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 6px 40px 0 #00000012;
+        color: #121a45;
+        outline: none;
+        margin-bottom: 12px;
+      }
+
+      .popular-posts {
+        .wpp-list {
+          counter-reset: posts;
+
+          li {
+            position: relative;
+            display: grid;
+            grid-template:
+                    "meta" minmax(0, max-content)
+                    "title" minmax(0, 1fr)
+            / 1fr;
+            margin: 0 0 1.6rem;
+            padding: 1.6rem 1.6rem 1.6rem 7.2rem;
+            background-color: @color-primary-3;
+            border-radius: @border-radius-2;
+            box-shadow: 0 6px 40px 0 #00000012;
+
+            &:before {
+              .text-sm;
+              .text-semi;
+
+              position: absolute;
+              top: 1.6rem;
+              left: 1.6rem;
+              content: counter(posts, decimal-leading-zero);
+              counter-increment: posts;
+              display: grid;
+              place-items: center;
+              width: 40px;
+              height: 40px;
+              color: @color-primary-3;
+              background-color: @color-primary-2;
+              border-radius: @border-radius-2;
+            }
+
+            .wpp-post-title {
+              .max-lines(2);
+              .text-md;
+              .text-medium;
+
+              grid-area: title;
+              color: @color-gray-800;
+            }
+
+            .wpp-meta {
+              grid-area: meta;
+
+              .wpp-category {
+                font-size: 0;
+
+                & * {
+                  display: none;
+                }
+
+                .wpp-taxonomy {
+                  &:first-of-type {
+                    .font-poppins;
+                    .text-xs;
+                    .text-medium;
+
+                    display: inline-block;
+                    margin: 0 0 0.4rem;
+                    color: @color-primary-2;
+                    text-transform: uppercase;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .wp-block-categories-list,
+  .wp-block-archives-list {
+    li {
+      margin: 0 0 0.8rem;
+
+      a {
+        .font-poppins;
+        .text-md;
+        .text-medium;
+
+        position: relative;
+        display: inline-block;
+        padding-left: 1.6rem;
+        color: @color-gray-600;
+
+        &:before {
+          content: "•";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: @color-gray-600;
+        }
+      }
+    }
+  }
+
+
+  // Post Details
+  .post-wrapper {
+    border-radius: @border-radius-4;
+    overflow: hidden;
+
+    > h2 {
+      .header-sm;
+      .text-semi;
+
+      margin-bottom: 2.4rem;
+      color: @color-gray-800;
+
+      a {
+        .header-sm;
+        .text-semi;
+
+        margin-bottom: 2.4rem;
+        color: @color-gray-800;
+      }
+    }
+
+    > .post-content {
+      .text-sm;
+      .text-normal;
+
+      color: @color-gray-800;
+
+      h1 {
+        .header-md2;
+        .text-semi;
+
+        margin-bottom: 0.25em;
+      }
+
+      h2 {
+        .header-md;
+        .text-semi;
+
+        margin-bottom: 0.25em;
+      }
+
+      h3 {
+        .header-sm;
+        .text-semi;
+
+        margin-bottom: 0.25em;
+      }
+
+      h4 {
+        .header-sm;
+        .text-semi;
+
+        margin-bottom: 0.25em;
+      }
+
+      h5 {
+        .header-xs;
+        .text-medium;
+
+        margin-bottom: 0.25em;
+      }
+
+      h6 {
+        .text-2xl;
+        .text-medium;
+
+        margin-bottom: 0.25em;
+      }
+
+      p {
+        .text-sm;
+        .text-normal;
+
+        margin: 0 0 1.6rem;
+      }
+    }
+  }
+}

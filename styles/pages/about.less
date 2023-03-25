@@ -4,7 +4,7 @@
     z-index: 0;
 
     &__main_image {
-      filter: brightness(0.7);
+      filter: brightness(0.6);
     }
 
     &__sketch {
@@ -35,7 +35,7 @@
 
   #section_message_from_ceo {
     position: relative;
-    padding: 90px 0;
+    padding: 90px 0 60px;
     z-index: 0;
 
     .container {
@@ -121,6 +121,293 @@
         .main {
           width: 60%;
           height: auto;
+        }
+      }
+    }
+  }
+
+  #section_mission_and_vision {
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 0;
+
+    background-image: url(/wp-content/uploads/2023/03/core-value-bg.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+
+    .header {
+      background: transparent;
+
+      .title {
+        .make-underline(@color-primary-3, 'center');
+        .header-md;
+        .text-semi;
+
+        margin-bottom: 4.8rem;
+        text-align: center;
+        color: @color-primary-3;
+      }
+    }
+
+
+    .body {
+      .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 48px;
+        align-items: stretch;
+        max-width: 920px;
+
+        .card {
+          padding: 1.6rem;
+          background-color: @color-primary-3;
+          box-shadow: 0 4px 20px 0 rgb(190 173 142 / 30%);
+          border-radius: @border-radius-4;
+
+          > img {
+            margin-bottom: 1.6rem;
+            max-height: 220px;
+            border-radius: @border-radius-3;
+          }
+
+          .title {
+            .header-xs;
+            .text-semi;
+
+            margin-bottom: 1.6rem;
+            text-align: center;
+            color: @color-primary-1;
+          }
+
+          .description {
+            .text-md;
+
+            margin-bottom: 4rem;
+            color: @color-primary-3;
+          }
+
+          .meta.author {
+            .value {
+              .text-md;
+              .text-semi;
+
+              margin-bottom: 0.5rem;
+              color: @color-primary-2;
+            }
+
+            .label {
+              .text-sm;
+              .text-light;
+
+              padding: 0;
+              color: @color-gray-800;
+            }
+          }
+        }
+
+        .images {
+          position: relative;
+          z-index: 0;
+          overflow-y: hidden;
+          display: grid;
+          align-items: end;
+          justify-items: center;
+          min-height: 580px;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+            z-index: 1;
+          }
+
+          .background {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0.3;
+            z-index: -1;
+          }
+
+          .main {
+            width: 60%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  #section_core_values {
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 0;
+
+    .body {
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        grid-gap: 3.2rem;
+
+        .card:first-child {
+          .title {
+            .make-underline(@color-primary-4, 'left');
+            .header-md;
+            .text-semi;
+
+            position: relative;
+            color: @color-gray-800;
+
+            em {
+              color: @color-primary-4;
+            }
+          }
+        }
+
+        .card:not(:first-child) {
+          padding: 4rem;
+          background: @color-primary-3 url(/wp-content/uploads/2023/03/value-card-bg.svg) no-repeat top left;
+          background-size: 100% auto;
+          min-height: 300px;
+          box-shadow: 0 4px 50px 0 #0000001a;
+          border-radius: @border-radius-4;
+          transition: all @animation-duration;
+
+          &:hover {
+            transform: scale(1.04);
+          }
+
+          .icon {
+            display: grid;
+            margin-bottom: 3.2rem;
+            width: 7.2rem;
+            height: 7.2rem;
+            place-items: center;
+            background-color: @color-primary-1;
+            border-radius: 100px;
+
+            img {
+              width: 4.8rem;
+              height: 4.8rem;
+              filter: invert(1);
+            }
+          }
+
+          .description {
+            .text-lg;
+
+            color: @color-primary-3;
+          }
+        }
+      }
+    }
+  }
+
+  #section_directors {
+    position: relative;
+    padding: 90px 0;
+    background-color: #061c2e;
+    z-index: 0;
+
+    .header {
+      background: transparent;
+
+      .title {
+        .make-underline(@color-primary-3, 'center');
+        .header-md;
+        .text-semi;
+
+        margin-bottom: 4.8rem;
+        text-align: center;
+        color: @color-primary-3;
+      }
+    }
+
+    .body {
+      .container {
+        .directors-swiper-wrapper {
+          position: relative;
+
+          .swiper-button-prev,
+          .swiper-button-next {
+            box-shadow: 0 0 0 1px @color-primary-3;
+
+            &:after {
+              filter: @filter-primary-3;
+            }
+
+            &:hover {
+              background-color: @color-primary-3;
+
+              &:after {
+                filter: @filter-primary-1;
+              }
+            }
+          }
+
+          .swiper-button-prev {
+            left: -4.8rem;
+          }
+
+          .swiper-button-next {
+            right: -4.8rem;
+          }
+
+          .directors-swiper {
+            padding: 2rem 0 6rem;
+
+            .swiper-slide {
+              position: relative;
+              min-height: 400px;
+              background-color: rgb(8 39 64 / 79%);
+              border-radius: @border-radius-5;
+              overflow: hidden;
+              z-index: 0;
+
+              img {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 80%;
+                height: auto;
+                transform: translateX(-50%);
+              }
+
+              .text {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 2.3rem 1.6rem 2.4rem;
+                background: linear-gradient(180deg, #081f4000 0,#081f40);
+
+                .subtitle {
+                  p {
+                    .text-md;
+                    .text-medium;
+
+                    margin-bottom: 0.5em;
+                    color: @color-primary-4;
+                  }
+                }
+
+                .title {
+                  .header-xs;
+                  .text-medium;
+
+                  color: @color-primary-3;
+                }
+              }
+            }
+          }
         }
       }
     }
